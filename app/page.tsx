@@ -47,14 +47,14 @@ export default function Home() {
         return <History />;
       case 'new-os':
         return (
-          <OSForm 
-            order={editingOrder || undefined} 
+          <OSForm
+            order={editingOrder || undefined}
             readOnly={isReadOnly}
             onComplete={() => {
               setEditingOrder(null);
               setIsReadOnly(false);
               setCurrentView('dashboard');
-            }} 
+            }}
           />
         );
       default:
@@ -64,15 +64,15 @@ export default function Home() {
 
   return (
     <div className="flex min-h-screen bg-background">
-      <Sidebar 
-        currentView={currentView} 
+      <Sidebar
+        currentView={currentView}
         onViewChange={(view) => {
           setEditingOrder(null);
           setIsReadOnly(false);
           setCurrentView(view);
-        }} 
+        }}
       />
-      
+
       <main className="flex-1 p-8 overflow-y-auto">
         <AnimatePresence mode="wait">
           <motion.div
@@ -89,3 +89,5 @@ export default function Home() {
     </div>
   );
 }
+
+//sanduiche
